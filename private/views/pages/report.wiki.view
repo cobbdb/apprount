@@ -1,0 +1,21 @@
+{| class="wikitable"
+|+ [Total Views = <?php echo $totalViews ?>]
+|+ [Page Total = <?php echo $totalPages ?>] [Search Depth = <?php echo $searchDepth ?>]
+! colspan="<?php echo $searchDepth + 1 ?>"| 
+! colspan="2"| Views
+! colspan="2"| Subpages
+! colspan="2"| Subcategories
+|-
+! colspan="<?php echo $searchDepth + 1 ?>"| Page Name
+! Direct
+! Total
+! Direct
+! Total
+! Direct
+! Total
+<?php
+    foreach ($pages as $page) {
+        echo $page->toWiki($searchDepth + 1);
+    }
+?>
+|}

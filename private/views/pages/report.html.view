@@ -1,0 +1,10 @@
+<div class="results_header">
+    Reporting with a search depth of <?php echo $searchDepth ?> on a total of
+    <b><?php echo $totalPages ?> pages</b> with a sum of
+    <b><?php echo $totalViews ?> views</b>.
+</div>
+<?php
+    foreach ($pages as $page) {
+        echo $page->toHTML();
+    }
+?>

@@ -1,0 +1,29 @@
+<link href="res/index.css" rel="stylesheet"/>
+<script src="res/index.js"></script>
+
+<div id="page">
+    <div id="logo">
+        <img src="res/img/logo_main.png" alt="Apprount"/>
+    </div>
+    
+    <form method="get">
+        <span id="titles">
+            <label>Enter a page title and press enter:</label>
+            <input type="hidden" value="" name="titles"/>
+            <textarea autofocus></textarea>
+        </span>
+        <span id="depth">
+            <label>Depth:</label>
+            <select name="depth">
+                <?php
+                    for ($i = 0; $i < 4; $i += 1) {
+                        echo "<option>$i</option>";
+                    }
+                ?>
+                <option>full</option>
+            </select>
+            <input type="submit" value=""/>
+        </span>
+        <div id="list"></div>
+    </form>
+</div>

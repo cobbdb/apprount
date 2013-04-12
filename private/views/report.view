@@ -1,0 +1,27 @@
+<link href="res/report.css" rel="stylesheet"/>
+<script src="res/report.js"></script>
+
+<div id="searchpage_content">
+    <div id="menu">
+        <div id="formats">
+            <input id="wiki" type="radio" name="radio"/>
+            <label for="wiki">Wiki</label>
+            <input id="csv" type="radio" name="radio"/>
+            <label for="csv">CSV</label>
+        </div>
+        <textarea readonly></textarea>
+        <div id="options">
+            <span id="copy"></span>
+            <a id="download" href="filegen.php"></a>
+        </div>
+    </div>
+    <div id="header_div">
+        <a id="logo_homepage_link" title="Apprount" href="./">
+            <img id="logo_wide" src="res/img/logo_wide.png" alt="Apprount"/>
+        </a>
+        <span id="exports"></span>
+    </div>
+    <div id="report_wrapper">
+        <?php echo $results ?>
+    </div>
+</div>

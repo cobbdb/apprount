@@ -1,0 +1,7 @@
+|-
+<?php
+    for ($i = 0; $i < $depth; $i += 1) {
+        echo "| -\n";
+    }
+?>
+| colspan="<?php echo $searchDepth - $depth ?>"| <?php echo $msg ?> 

@@ -1,0 +1,1 @@
+"<?php echo $title ?>",<?php echo $views ?>,<?php echo $views ?>,<?php echo $cntSubpagesDirect ?>,,<?php echo $cntSubcategoriesDirect ?>,,"<?php echo $uri ?>","<?php echo $parentTitle ?>"

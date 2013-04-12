@@ -1,0 +1,12 @@
+"Page Total","Search Depth","Total Views"
+7,1,49667
+
+"Page Title","Direct Views","Total Views","Direct Subpages","Total Subpages","Direct Subcategories","Total Subcategories","URI","Parent Category"
+"Example Broken Title",,,,,,,,"root"
+"Energy",6553,6553,,,,,"http://www.appropedia.org/Energy","root"
+"Category:Hydroelectricity",6064,43114,5,5,1,1,"http://www.appropedia.org/Category%3AHydroelectricity","root"
+"Alternatives to hydroelectric energy",10297,10297,,,,,"http://www.appropedia.org/Alternatives+to+hydroelectric+energy","Category:Hydroelectricity"
+"Alternatives to hydroelectric energy (original)",4738,4738,,,,,"http://www.appropedia.org/Alternatives+to+hydroelectric+energy+%28original%29","Category:Hydroelectricity"
+"Microhydro",5044,5044,,,,,"http://www.appropedia.org/Microhydro","Category:Hydroelectricity"
+"Tidal power",535,535,,,,,"http://www.appropedia.org/Tidal+power","Category:Hydroelectricity"
+"Category:Microhydro",16436,16436,14,,0,,"http://www.appropedia.org/Category%3AMicrohydro","Category:Hydroelectricity"

@@ -1,0 +1,6 @@
+"<?php echo $title ?>",<?php echo $views ?>,<?php echo $totalViews ?>,<?php echo $cntSubpagesDirect ?>,<?php echo $cntSubpagesTotal ?>,<?php echo $cntSubcategoriesDirect ?>,<?php echo $cntSubcategoriesTotal ?>,"<?php echo $uri ?>","<?php echo $parentTitle ?>"
+<?php
+    foreach ($subpages as $page) {
+        echo $page->toCSV($title);
+    }
+?>

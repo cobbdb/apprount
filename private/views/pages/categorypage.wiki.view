@@ -1,0 +1,18 @@
+|-
+<?php
+    for ($i = 0; $i < $depth; $i += 1) {
+        echo "| -\n";
+    }
+?>
+| colspan="<?php echo $searchDepth - $depth ?>"| [[:<?php echo $title ?>]]
+| align="right"| <?php echo $views ?> 
+| align="right"| <?php echo $totalViews ?> 
+| align="right"| <?php echo $cntSubpagesDirect ?> 
+| align="right"| <?php echo $cntSubpagesTotal ?> 
+| align="right"| <?php echo $cntSubcategoriesDirect ?> 
+| align="right"| <?php echo $cntSubcategoriesTotal ?> 
+<?php
+    foreach ($subpages as $page) {
+        echo $page->toWiki($searchDepth);
+    }
+?>

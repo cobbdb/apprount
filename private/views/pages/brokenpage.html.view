@@ -1,0 +1,12 @@
+<div class="result_div broken page" style="margin-left:<?php echo $indent ?>px">
+    <div class="result_icon">
+        <img src="res/img/icon_broken.png" alt="<?php echo $alt ?>" />
+    </div>
+    <div class="result_body">
+        <span class="result_query"><?php echo $title ?></span>
+        <br />
+        <span class="result_url">
+            <?php echo $msg ?>
+        </span>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<script>
+// Global var fix for double requests in Chrome.
+busy = false;
+</script>
+<div id="page">
+    <link href="res/search.css" rel="stylesheet"/>
+    <script src="res/search.js"></script>
+
+    <input id="key" type="hidden" value="<?php echo $key ?>"/>
+
+    <img src="res/img/logo_main.png" class="logo_img" alt="Apprount"/>
+    <br/>
+
+    <div id="busy">
+        <img src="res/img/load_icon.gif" alt="CreatingReport"/>
+        <br />
+        <label>Creating Report</label>
+    </div>
+</div>

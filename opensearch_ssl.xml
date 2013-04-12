@@ -1,0 +1,8 @@
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+	<ShortName>Apprount</ShortName>
+	<Description>Search Apprount (SSL)</Description>
+	<InputEncoding>UTF-8</InputEncoding>
+	<LongName>Apprount SSL Search</LongName>
+	<Image width="16" height="16">http://pequals.com/apprount/img/favicon.ico</Image>
+	<Url type="text/html" method="get" template="http://pequals.com/apprount/{searchTerms}"/>
+</OpenSearchDescription>

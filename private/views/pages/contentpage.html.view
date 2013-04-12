@@ -1,0 +1,13 @@
+<div class="result_div healthy page" style="margin-left:<?php echo $indent ?>px">
+    <div class="result_icon">
+        <img src="res/img/icon_page.png" alt="healthy page" />
+    </div>
+    <div class="result_body">
+        <span class="result_query"><?php echo $title ?></span>
+        <span class="result_views"><?php echo $views ?> views</span>
+        <br />
+        <span class="result_url">
+            <a href="<?php echo $link ?>" target="_blank"><?php echo $uri ?></a>
+        </span>
+    </div>
+</div>

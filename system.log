@@ -1,0 +1,31 @@
+
+[23:48:23] Log Reset.
+
+
+[23:48:23] Received request for search.
+[23:48:23] Key is: e6c6e68143c445198bc78ca477b350acb742cf13
+[23:48:23] Completed request for search.
+
+
+[23:48:23] Log closed
+
+[23:48:23] Log opened.
+
+
+[23:48:23] Received request for report.
+
+[23:48:23] Query for: php|query|info|energy
+[23:48:23] Response Content was: {"query":{"normalized":[{"from":"energy","to":"Energy"}],"pages":{"7754":{"pageid":7754,"ns":0,"title":"Energy","touched":"2013-02-13T05:16:26Z","lastrevid":229470,"counter":14352,"length":4316}}}}
+
+[23:48:23] Catalog now contains: array (
+  'REPORT' => 0,
+)
+
+[23:48:23] Catalog now contains: array (
+  'REPORT' => 0,
+  'Energy' => 14352,
+)
+[23:48:23] Completed request for report.
+
+
+[23:48:23] Log closed

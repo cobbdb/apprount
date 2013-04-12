@@ -1,0 +1,9 @@
+"Page Total","Search Depth","Total Views"
+<?php echo $totalPages ?>,<?php echo $searchDepth ?>,<?php echo $totalViews ?> 
+
+"Page Title","Direct Views","Total Views","Direct Subpages","Total Subpages","Direct Subcategories","Total Subcategories","URI","Search Parent"
+<?php
+    foreach ($pages as $page) {
+        echo $page->toCSV("root");
+    }
+?>

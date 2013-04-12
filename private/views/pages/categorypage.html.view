@@ -1,0 +1,31 @@
+<div class="result_div healthy category" style="margin-left:<?php echo $indent ?>px">
+    <div class="result_icon" id="icon_div_<?php echo $catID ?>">
+        <img src="res/img/icon_plus.png" alt="healthy category" />
+    </div>
+    <div class="result_body">
+        <span class="result_query"><?php echo $title ?></span>
+        <span class="result_views"><?php echo $views ?> views</span>
+        <br />
+        <div class="result_description">
+            <span class="result_text_total"><?php echo $totalViews ?></span>
+            total views of category page and contents.
+            <br />
+            <span class="result_text_details">
+                SubPages: <?php echo $cntSubpagesDirect ?> direct /
+                <?php echo $cntSubpagesTotal ?> total -
+                SubCategories: <?php echo $cntSubcategoriesDirect ?> direct /
+                <?php echo $cntSubcategoriesTotal ?> total
+            </span>
+        </div>
+        <span class="result_url">
+            <a href="<?php echo $link ?>" target="_blank"><?php echo $uri ?></a>
+        </span>
+    </div>
+</div>
+<div id="div_<?php echo $catID ?>" class="result_contents" style="display:none;">
+    <?php
+        foreach ($subpages as $page) {
+            echo $page->toHTML();
+        }
+    ?>
+</div>
