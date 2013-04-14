@@ -1,16 +1,16 @@
 <title>PEquals - Apprount</title>
 <meta name="description" content="Page view reporting on Appropedia - the sustainability wiki."/>
 <meta name="keywords" content="apprount, appount, aprount, appront, page view, appropedia, report, appropriate technology, sustainable technology"/>
-<link rel="icon" href="./img/logo_icon.png" type="image/png"/>
+<link rel="icon" href="res/img/logo_icon.png" type="image/png"/>
 
 <link rel="canonical" href="http://pequals.com/apprount/"/>
-<link title="Apprount" type="application/opensearchdescription+xml" rel="search" href="./opensearch_ssl.xml"/>
+<link title="Apprount" type="application/opensearchdescription+xml" rel="search" href="opensearch_ssl.xml"/>
 <meta name="HandheldFriendly" content="true"/>
 <meta name="apple-mobile-web-app-capable" content="yes"/>
-<link rel="image_src" href="./img/logo_icon.png" type="image/png"/>
-<link rel="apple-touch-icon" href="./img/logo_icon.png" type="image/png"/>
+<link rel="image_src" href="res/img/logo_icon.png" type="image/png"/>
+<link rel="apple-touch-icon" href="res/img/logo_icon.png" type="image/png"/>
 
 <link rel="stylesheet" href="res/global.css"/>
 <link rel="stylesheet" href="res/aristo.css"/>
-<script src="res/jquery-1.8.2.min.js"></script>
-<script src="res/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
