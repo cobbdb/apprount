@@ -1,45 +1,39 @@
 #page {
 	padding-top: 40px;
 }
-
 #logo {
     text-align: center;
 }
-
 form {
     position: relative;
 	max-width: 550px;
 	margin: 20px auto 0 auto;
 	text-align: left;
 }
-
 #titles {
     float: left;
     position: relative;
 }
-
 #depth {
     float: right;
     position: relative;
 }
-
 label {
     position: absolute;
     bottom: 100%;
     left: 2px;
     white-space: nowrap;
 }
-
 select {
     float: left;
 	background: #FFF;
 	color: #222;
 	height: 39px;
+    outline: none;
 	border: 1px solid #8D8D8D;
 	font-size: 18px;
 	margin: 0px;
 }
-
 textarea {
     white-space: nowrap;
     overflow: hidden;
@@ -49,6 +43,7 @@ textarea {
 	color: #222;
 	height: 28px;
     margin: 0;
+    outline: none;
 	border: 1px solid #8D8D8D;
 	font-size: 18px;
 	font-family: Arial,sans-serif;
@@ -60,11 +55,9 @@ textarea {
 	-moz-box-shadow: 1px 1px 2px #999 inset;
 	box-shadow: 1px 1px 2px #999 inset;
 }
-
 textarea:focus, select:focus {
 	border-color: #19B;
 }
-
 input[type="submit"] {
 	height: 39px;
 	width: 44px;
@@ -75,7 +68,6 @@ input[type="submit"] {
 	-moz-border-radius: 0 3px 3px 0;
 	border-radius: 0 3px 3px 0;
 }
-
 input[type="submit"]:active {
 	background-position: left bottom;
 }
@@ -85,7 +77,6 @@ input[type="submit"]:active {
     position: absolute;
     top: 50px;
 }
-
 #list img {
     cursor: pointer;
     color: red;

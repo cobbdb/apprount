@@ -2,16 +2,13 @@
     padding-top: 40px;
     text-align: center;
 }
-
 #busy {
 	margin-top: 40px;
 	color: #434343;
 }
-
 label {
 	color: #781900;
 }
-
 #busy div {
     margin: 10px auto;
     width: 220px;
