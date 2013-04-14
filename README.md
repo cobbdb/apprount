@@ -1,6 +1,6 @@
 # Apprount
 ### A web tool for aggregating site usage statistics on Appropedia.  
-###### Version 1.4.0
+Version **1.4.0**
 
 ---
 This tool is hosted by [PEquals.com](http://www.pequals.com/apprount).
