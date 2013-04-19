@@ -1,6 +1,6 @@
 # Apprount
 ### A web tool for aggregating site usage statistics on Appropedia.  
-Version **1.4.0**
+Version **1.4.1**
 
 ---
 This tool is hosted by [PEquals.com](http://www.pequals.com/apprount).
@@ -16,6 +16,7 @@ Libraries Used:
 * [jQuery](http://www.jquery.com)
 * [jQueryUI](http://www.jqueryui.com)
 * [Aristo jQueryUI Theme](http://taitems.github.io/Aristo-jQuery-UI-Theme/)
+* [Eta](http://www.github.com/cobbdb/eta)
 
 ---
 By Dan Cobb with Lonny Grafman
