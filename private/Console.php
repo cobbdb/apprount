@@ -4,7 +4,6 @@
  * System output console to "system.log" file.
  * @author Dan Cobb
  * @since 1.4.0
- * @date February 25, 2013
  */
 class Console {
     /**

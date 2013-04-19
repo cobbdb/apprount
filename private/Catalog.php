@@ -1,13 +1,10 @@
 <?php
 
-require_once "Console.php";
-
 /**
  * Catalog.php
  * 
  * @author Dan Cobb
- * @since 1.4.0
- * @date October 5, 2012
+ * @since 1.4.1
  */
 class Catalog {
     /**

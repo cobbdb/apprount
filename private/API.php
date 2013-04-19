@@ -4,14 +4,14 @@
  * Api.php
  * 
  * @author Dan Cobb
- * @since 1.4.0
- * @date February 14, 2013
+ * @since 1.4.1
  */
 
+require_once "eta.php";
+require_once "Console.php";
+require_once "Catalog.php";
 require_once "Page.php";
 require_once "PageFactory.php";
-require_once "Console.php";
-
 
 /**
  * Convenience class for category information.

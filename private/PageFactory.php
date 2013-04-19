@@ -1,14 +1,10 @@
 <?php
 
-require_once "Page.php";
-require_once "API.php";
-
 /**
  * PageFactory.php
  * 
  * @author Dan Cobb
- * @since 1.4.0
- * @date October 4, 2012
+ * @since 1.4.1
  */
 class PageFactory {
     private static $searchDepth;

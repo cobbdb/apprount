@@ -1,15 +1,10 @@
 <?php
 
-require_once $_SERVER["DOCUMENT_ROOT"] . "/util/Engine.php";
-require_once "Catalog.php";
-require_once "Console.php";
-
 /**
  * Page.php
  * 
  * @author Dan Cobb
- * @since 1.4.0
- * @date October 5, 2012
+ * @since 1.4.1
  */
 abstract class Page {
     /**
@@ -124,22 +119,22 @@ class Report extends Page {
     }
     
     public function toHTML() {
-        return Template::render(
-            "./private/views/pages/report.html.view",
+        return H::render(
+            "pages/report.html.view",
             $this->model()
         );
     }
     
     public function toWiki($arg) {
-        return Template::render(
-            "./private/views/pages/report.wiki.view",
+        return H::render(
+            "pages/report.wiki.view",
             $this->model()
         );
     }
     
     public function toCSV($arg) {
-        return Template::render(
-            "./private/views/pages/report.csv.view",
+        return H::render(
+            "pages/report.csv.view",
             $this->model()
         );
     }
@@ -158,7 +153,7 @@ class Report extends Page {
 
 class ContentPage extends Page {
     public function toHTML() {
-        return Template::render("./private/views/pages/contentpage.html.view", Array(
+        return H::render("pages/contentpage.html.view", Array(
             "indent" => $this->depth * 22,
             "title" => $this->title,
             "views" => $this->views,
@@ -168,7 +163,7 @@ class ContentPage extends Page {
     }
     
     public function toWiki($searchDepth) {
-        return Template::render("./private/views/pages/contentpage.wiki.view", Array(
+        return H::render("pages/contentpage.wiki.view", Array(
             "title" => $this->title,
             "views" => $this->views,
             "depth" => $this->depth,
@@ -177,7 +172,7 @@ class ContentPage extends Page {
     }
     
     public function toCSV($parentTitle) {
-        return Template::render("./private/views/pages/contentpage.csv.view", Array(
+        return H::render("pages/contentpage.csv.view", Array(
             "title" => $this->title,
             "views" => $this->views,
             "uri" => $this->uri,
@@ -198,7 +193,7 @@ class BrokenPage extends Page {
     }
     
     public function toHTML() {
-        return Template::render("./private/views/pages/brokenpage.html.view", Array(
+        return H::render("pages/brokenpage.html.view", Array(
             "indent" => $this->depth * 22,
             "alt" => "broken page",
             "title" => $this->title,
@@ -207,7 +202,7 @@ class BrokenPage extends Page {
     }
     
     public function toWiki($searchDepth) {
-        return Template::render("./private/views/pages/brokenpage.wiki.view", Array(
+        return H::render("pages/brokenpage.wiki.view", Array(
             "depth" => $this->depth,
             "searchDepth" => $searchDepth,
             "msg" => "Page Not Found: " . $this->title
@@ -215,7 +210,7 @@ class BrokenPage extends Page {
     }
     
     public function toCSV($parentTitle) {
-        return Template::render("./private/views/pages/brokenpage.csv.view", Array(
+        return H::render("pages/brokenpage.csv.view", Array(
             "msg" => "Page Not Found: " . $this->title,
             "parentTitle" => $parentTitle
         ));
@@ -241,7 +236,7 @@ class CategoryPage extends Page {
     }
     
     public function toHTML() {
-        return Template::render("./private/views/pages/categorypage.html.view", Array(
+        return H::render("pages/categorypage.html.view", Array(
             "indent" => $this->depth * 22,
             "catID" => $this->catID,
             "title" => $this->title,
@@ -258,7 +253,7 @@ class CategoryPage extends Page {
     }
     
     public function toWiki($searchDepth) {
-        return Template::render("./private/views/pages/categorypage.wiki.view", Array(
+        return H::render("pages/categorypage.wiki.view", Array(
             "title" => $this->title,
             "views" => $this->views,
             "depth" => $this->depth,
@@ -273,7 +268,7 @@ class CategoryPage extends Page {
     }
     
     public function toCSV($parentTitle) {
-        return Template::render("./private/views/pages/categorypage.csv.view", Array(
+        return H::render("pages/categorypage.csv.view", Array(
             "title" => $this->title,
             "views" => $this->views,
             "totalViews" => $this->getAllViews(),
@@ -296,7 +291,7 @@ class CategoryPage extends Page {
  */
 class LeafCategory extends Page {
     public function toHTML() {
-        return Template::render("./private/views/pages/leafcategory.html.view", Array(
+        return H::render("pages/leafcategory.html.view", Array(
             "indent" => $this->depth * 22,
             "title" => $this->title,
             "views" => $this->views,
@@ -311,7 +306,7 @@ class LeafCategory extends Page {
     }
     
     public function toWiki($searchDepth) {
-        return Template::render("./private/views/pages/categorypage.wiki.view", Array(
+        return H::render("pages/categorypage.wiki.view", Array(
             "title" => $this->title,
             "views" => $this->views,
             "depth" => $this->depth,
@@ -325,7 +320,7 @@ class LeafCategory extends Page {
     }
     
     public function toCSV($parentTitle) {
-        return Template::render("./private/views/pages/categorypage.csv.view", Array(
+        return H::render("pages/categorypage.csv.view", Array(
             "title" => $this->title,
             "views" => $this->views,
             "totalViews" => $this->getAllViews(),

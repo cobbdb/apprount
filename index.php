@@ -8,14 +8,12 @@
  * pequals.com/apprount/?[depth=<depth>&]titles=<page title>[|<page title>]
  * 
  * @author Dan Cobb
- * @since 1.4.0
- * @date October 5, 2012
+ * @since 1.4.1
  */
 
 require_once "./private/API.php";
-require_once "./private/Console.php";
-require_once "../util/Engine.php";
-
+H::setHome("./private/views/");
+H::setBase("../base.view");
 
 define("SECRET", "RobinHood123");
 //Console::unlock();
@@ -67,7 +65,7 @@ if ($action == "search") {
 
 
 // Prepare header content.
-$head = Template::render("./private/views/head.view");
+$head = H::render("head.view");
 
 switch ($action) {
     // Search-in-Progress page.
@@ -80,10 +78,10 @@ switch ($action) {
         $_SESSION["key"] = $key;
         Console::log("Key is: $key");
         
-        $body = Template::render("./private/views/search.view", Array(
+        $body = H::render("search.view", Array(
             "key" => $key
         ));
-        echo Template::render(null, Array(
+        echo H::render(null, Array(
             "head" => $head,
             "body" => $body
         ));
@@ -101,7 +99,7 @@ switch ($action) {
             $report = API::newReport($_SESSION["depth"], $_SESSION["titles"]);
             session_destroy();
             
-            $page = Template::render("./private/views/report.view", Array(
+            $page = H::render("report.view", Array(
                 "results" => $report->toHTML()
             ));
             
@@ -121,8 +119,8 @@ switch ($action) {
     default:
         Console::clear();
         Console::log("Received request for $action.", 1, 1);
-        $body = Template::render("./private/views/index.view");
-        echo Template::render(null, Array(
+        $body = H::render("index.view");
+        echo H::render(null, Array(
             "head" => $head,
             "body" => $body
         ));
