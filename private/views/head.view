@@ -2,7 +2,7 @@
 <meta name="description" content="Page view reporting on Appropedia - the sustainability wiki."/>
 <meta name="keywords" content="apprount, appount, aprount, appront, page view, appropedia, report, appropriate technology, sustainable technology"/>
 <link rel="icon" href="res/img/logo_icon.png" type="image/png"/>
-<link rel="search" type="application/opensearchdescription+xml" title="Apprount" href="/opensearch.xml">
+<link rel="search" type="application/opensearchdescription+xml" title="Apprount" href="opensearch.xml">
 
 <link rel="canonical" href="http://pequals.com/apprount/"/>
 <meta name="HandheldFriendly" content="true"/>
