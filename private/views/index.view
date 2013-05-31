@@ -1,15 +1,22 @@
-<link href="res/index.css" rel="stylesheet"/>
+<link href="res/index.css" rel="stylesheet">
 <script src="res/index.js"></script>
+
+<script type="text/tpl" id="titleTpl">
+    <div>
+        <img src="res/img/icon_trash.png" title="Remove title">
+        <span><%= title %></span>
+    </div>
+</script>
 
 <div id="page">
     <div id="logo">
-        <img src="res/img/logo_main.png" alt="Apprount"/>
+        <img src="res/img/logo_main.png" alt="Apprount">
     </div>
     
     <form method="get">
         <span id="titles">
             <label>Enter a page title and press enter:</label>
-            <input type="hidden" value="" name="titles"/>
+            <input type="hidden" value="" name="titles">
             <textarea autofocus></textarea>
         </span>
         <span id="depth">
@@ -22,7 +29,7 @@
                 ?>
                 <option>full</option>
             </select>
-            <input type="submit" value=""/>
+            <input type="submit" value="">
         </span>
         <div id="list"></div>
     </form>
