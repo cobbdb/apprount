@@ -76,8 +76,13 @@ input[type="submit"]:active {
     color: black;
     position: absolute;
     top: 50px;
+    font-size: 16px;
+}
+#list > div {
+    margin: 0 5px 5px;
 }
 #list img {
     cursor: pointer;
     color: red;
+    height: 18px;
 }
