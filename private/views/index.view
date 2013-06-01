@@ -7,7 +7,7 @@
         <span><%= title %></span>
     </div>
 </script>
-<img src="res/img/icon_trash.png" class="hidden">
+<img src="res/img/icon_trash.png" style="display:none">
 
 <div id="page">
     <div id="logo">
