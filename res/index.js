@@ -3,6 +3,10 @@ $(function () {
     $(window).resize(sizeSearchBar);
     sizeSearchBar();
 
+    // Preload trash can icon.
+    var icon = new Image();
+    icon.src = 'res/img/icon_trash.png';
+
     // Format query on form submit.
     $('form').submit(function () {
         // Commit any unentered title.
