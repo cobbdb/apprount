@@ -3,10 +3,11 @@
 
 <script type="text/tpl" id="titleTpl">
     <div>
-        <img src="res/img/icon_trash.png" title="Remove title">
+        <img src="res/img/icon_trash.png" title="Remove title" alt="Remove Title">
         <span><%= title %></span>
     </div>
 </script>
+<img src="res/img/icon_trash.png" class="hidden">
 
 <div id="page">
     <div id="logo">
