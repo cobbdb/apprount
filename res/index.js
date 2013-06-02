@@ -10,8 +10,8 @@ $(function () {
 
         // Build search query.
         var query = '';
-        $('#list span').each(function () {
-            query += $(this).text() + '|';
+        $('#list span').each(function (i, title) {
+            query += $(title).text() + '|';
         });
         query = query.slice(0, -1);
 
