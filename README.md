@@ -17,6 +17,7 @@ Libraries Used:
 * [jQueryUI](http://www.jqueryui.com)
 * [Aristo jQueryUI Theme](http://taitems.github.io/Aristo-jQuery-UI-Theme/)
 * [Eta](http://www.github.com/cobbdb/eta)
+* [Underscore](http://underscorejs.org/)
 
 ---
 By Dan Cobb with Lonny Grafman
