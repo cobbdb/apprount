@@ -58,7 +58,7 @@ function addTitle() {
             title = title.trim();
             if (!_(title).isEmpty()) {
                 $('#list')
-                    .append(tpl({
+                    .prepend(tpl({
                         title: title
                     }))
                     .find('img')
