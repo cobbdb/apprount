@@ -126,7 +126,7 @@ class API {
             "format" => "php",
             "action" => "login",
             "lgname" => "Pequalsbot",
-            "lgpassword" => "p=4all"
+            "lgpassword" => file_get_contents("./private/login.txt")
         );
         
         // Query ignoring any existing cookie information.
