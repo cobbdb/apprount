@@ -2,7 +2,7 @@
 
 /**
  * Page.php
- * 
+ *
  * @author Dan Cobb
  * @since 1.4.1
  */
@@ -26,32 +26,32 @@ abstract class Page {
         }
         return false;
     }
-    
+
     /**
      * @returns {Boolean} True if page is not broken.
      */
     public static function isHealthy($page) {
         return isset($page["counter"]);
     }
-    
-    
+
+
     protected $title, $views, $depth, $uri, $link;
     protected $subpages = Array();
     protected $subcats = Array();
-    
+
     public abstract function toHTML();
     public abstract function toWiki($depth);
     public abstract function toCSV($title);
-    
+
     public function __construct($title, $views, $depth) {
         $this->title = $title;
         $this->views = $views;
         $this->depth = $depth;
         $this->uri = "appropedia.org/" . $title;
-        
+
         // Add page information to the global catalog.
         Catalog::addPage($title, $views);
-        
+
         // Some titles contain slashes, so encode only each subpath of the title.
         $pathSections = explode("/", $title);
         $encodedSections = Array();
@@ -60,31 +60,31 @@ abstract class Page {
         }
         $this->link = "http://www.appropedia.org/" . implode("/", $encodedSections);
     }
-    
+
     public function getPages() {
         return array_merge($this->subpages, $this->subcats);
     }
-    
+
     public function getPageSet() {
         $set = Array(
             $this->title => $this->views
         );
-        
+
         $pages = $this->getPages();
         foreach ($pages as $page) {
             $set += $page->getPageSet();
         }
         return $set;
     }
-    
+
     public function getTitle() {
         return $this->title;
     }
-    
+
     public function getSubpageCnt() {
         return sizeof($this->getPageSet()) - 1;
     }
-    
+
     public function getSubcatCnt() {
         $count = sizeof($this->subcats);
         foreach ($this->subcats as $page) {
@@ -92,7 +92,7 @@ abstract class Page {
         }
         return $count;
     }
-    
+
     public function getAllViews() {
         $total = 0;
         $set = $this->getPageSet();
@@ -101,7 +101,7 @@ abstract class Page {
         }
         return $total;
     }
-    
+
     public function addPage($page) {
         if (Page::isCategory($page->getTitle(), true)) {
             $this->subcats[] = $page;
@@ -117,28 +117,28 @@ class Report extends Page {
     public function __construct($depth) {
         parent::__construct("REPORT", 0, $depth);
     }
-    
+
     public function toHTML() {
         return H::render(
             "pages/report.html.view",
             $this->model()
         );
     }
-    
+
     public function toWiki($arg) {
         return H::render(
             "pages/report.wiki.view",
             $this->model()
         );
     }
-    
+
     public function toCSV($arg) {
         return H::render(
             "pages/report.csv.view",
             $this->model()
         );
     }
-    
+
     private function model() {
         return Array(
             "searchDepth" => $this->depth,
@@ -161,7 +161,7 @@ class ContentPage extends Page {
             "uri" => $this->uri
         ));
     }
-    
+
     public function toWiki($searchDepth) {
         return H::render("pages/contentpage.wiki.view", Array(
             "title" => $this->title,
@@ -170,7 +170,7 @@ class ContentPage extends Page {
             "searchDepth" => $searchDepth
         ));
     }
-    
+
     public function toCSV($parentTitle) {
         return H::render("pages/contentpage.csv.view", Array(
             "title" => $this->title,
@@ -191,7 +191,7 @@ class BrokenPage extends Page {
     public function __construct($title, $depth) {
         parent::__construct($title, 0, $depth);
     }
-    
+
     public function toHTML() {
         return H::render("pages/brokenpage.html.view", Array(
             "indent" => $this->depth * 22,
@@ -200,7 +200,7 @@ class BrokenPage extends Page {
             "msg" => "Page Not Found"
         ));
     }
-    
+
     public function toWiki($searchDepth) {
         return H::render("pages/brokenpage.wiki.view", Array(
             "depth" => $this->depth,
@@ -208,7 +208,7 @@ class BrokenPage extends Page {
             "msg" => "Page Not Found: " . $this->title
         ));
     }
-    
+
     public function toCSV($parentTitle) {
         return H::render("pages/brokenpage.csv.view", Array(
             "msg" => "Page Not Found: " . $this->title,
@@ -228,13 +228,13 @@ class CategoryPage extends Page {
     private static $maxCatID = 0;
     /** Unique page id. */
     private $catID;
-    
+
     public function __construct($title, $views, $depth) {
         parent::__construct($title, $views, $depth);
         $this->catID = self::$maxCatID;
         self::$maxCatID += 1;
     }
-    
+
     public function toHTML() {
         return H::render("pages/categorypage.html.view", Array(
             "indent" => $this->depth * 22,
@@ -251,7 +251,7 @@ class CategoryPage extends Page {
             "subpages" => $this->getPages()
         ));
     }
-    
+
     public function toWiki($searchDepth) {
         return H::render("pages/categorypage.wiki.view", Array(
             "title" => $this->title,
@@ -266,7 +266,7 @@ class CategoryPage extends Page {
             "subpages" => $this->getPages()
         ));
     }
-    
+
     public function toCSV($parentTitle) {
         return H::render("pages/categorypage.csv.view", Array(
             "title" => $this->title,
@@ -304,7 +304,7 @@ class LeafCategory extends Page {
             "uri" => $this->uri
         ));
     }
-    
+
     public function toWiki($searchDepth) {
         return H::render("pages/categorypage.wiki.view", Array(
             "title" => $this->title,
@@ -318,7 +318,7 @@ class LeafCategory extends Page {
             "totalViews" => $this->getAllViews()
         ));
     }
-    
+
     public function toCSV($parentTitle) {
         return H::render("pages/categorypage.csv.view", Array(
             "title" => $this->title,
